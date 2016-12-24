@@ -8,16 +8,43 @@ import "./App.css";
 class App extends Component {
 	render() {
 		return (
-			<div className="ui container">
-				<div className="ui three item menu">
-					<Link className="item" activeClassName="active" activeOnlyWhenExact to="/">Home</Link>
-					<Link className="item" activeClassName="active" activeOnlyWhenExact to="/menu">Menu</Link>
-					<Link className="item" activeClassName="active" activeOnlyWhenExact to="/order">Start Order</Link>
-				</div>
+			<div>
+			<div id="page-wrapper">
+				<nav style={{textAlign: 'center'}} id="nav">
+					<ul>
+						<li className={(location.pathname === "/") ? "current" : ""}><Link to="/">Home</Link></li>
+						<li className={(location.pathname === "/menu") ? "current" : ""}><Link to="/menu">Menu</Link></li>
+						<li className={(location.pathname === "/order") ? "current" : ""}><Link to="/order">Start Order</Link></li>
+						<li className={(location.pathname === "/link1") ? "current" : ""}><Link to="/">Link 1</Link></li>
+						<li className={(location.pathname === "/link2") ? "current" : ""}><Link to="/">Link 2</Link></li>
+					</ul>
+				</nav>
+			</div>
 
 				<Match exactly pattern="/" component={HomePage} />
 				<Match exactly pattern="/menu" component={MenuPage} />
 				<Match pattern="/order" component={OrderPage} />
+
+					<div id="footer">
+						<div className="container">
+							<div className="row">
+							</div>
+						</div>
+						{/* Icons */}
+						<ul className="icons">
+							<li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
+							<li><a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
+							<li><a href="#" className="icon fa-github"><span className="label">GitHub</span></a></li>
+							<li><a href="#" className="icon fa-linkedin"><span className="label">LinkedIn</span></a></li>
+							<li><a href="#" className="icon fa-google-plus"><span className="label">Google+</span></a></li>
+						</ul>
+						{/* Copyright */}
+						<div className="copyright">
+							<ul className="menu">
+								<li>© Food-To-Go. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</div>
 			</div>
 		);
 	}

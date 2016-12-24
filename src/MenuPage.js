@@ -10,11 +10,18 @@ class MenuPage extends React.Component {
 
 	render() {
 		return(
-			<div>
-				<h1>Menu</h1>
-
-				<Menu menu={this.props.menu} />
-			</div>
+			<section className="wrapper style1">
+				<div className="container">
+					<div id="content">
+						<article>
+							<header>
+								<h2>Menu</h2>
+								<Menu menu={this.props.menu} />
+							</header>
+						</article>
+					</div>
+				</div>
+			</section>
 		);
 	}
 }
