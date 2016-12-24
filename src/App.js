@@ -3,6 +3,7 @@ import { Link, Match } from "react-router";
 import HomePage from "./HomePage";
 import MenuPage from "./MenuPage";
 import OrderPage from "./OrderPage";
+import LoginPage from "./LoginPage";
 import "./App.css";
 
 class App extends Component {
@@ -15,8 +16,8 @@ class App extends Component {
 						<li className={(location.pathname === "/") ? "current" : ""}><Link to="/">Home</Link></li>
 						<li className={(location.pathname === "/menu") ? "current" : ""}><Link to="/menu">Menu</Link></li>
 						<li className={(location.pathname === "/order") ? "current" : ""}><Link to="/order">Start Order</Link></li>
-						<li className={(location.pathname === "/link1") ? "current" : ""}><Link to="/">Link 1</Link></li>
-						<li className={(location.pathname === "/link2") ? "current" : ""}><Link to="/">Link 2</Link></li>
+						<li className={(location.pathname === "/extralink") ? "current" : ""}><Link to="/">Extra Link</Link></li>
+						<li className={(location.pathname === "/signin") ? "current" : ""}><Link to="/signin">Sign In</Link></li>
 					</ul>
 				</nav>
 			</div>
@@ -24,6 +25,7 @@ class App extends Component {
 				<Match exactly pattern="/" component={HomePage} />
 				<Match exactly pattern="/menu" component={MenuPage} />
 				<Match pattern="/order" component={OrderPage} />
+				<Match pattern="/signin" component={LoginPage} />
 
 					<div id="footer">
 						<div className="container">
