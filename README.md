@@ -2,7 +2,7 @@
 A React front end for food-to-go! A website designed to allow restaurants to offer food to be ordered online!
 
 ## Prerequisites
-* [food-to-go](https://github.com/cynical89/food-to-go)
+* [food-to-go](https://github.com/cynical89/food-to-go)  (api server for the front end)
 
 ## Included goodies
 * [React](https://facebook.github.io/react/)
