@@ -6,8 +6,8 @@ export default function Menu({ menu }) {
 	);
 
 	const menuItems = (
-		menu.map(item => {
-			return <li>{item.value.name} - ${item.value.price/100}</li>
+		menu.map((item, key) => {
+			return <li key={key}>{item.value.name} - ${item.value.price/100}</li>
 		})
 	);
 
